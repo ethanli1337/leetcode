@@ -11,4 +11,12 @@ print(two_sum_brute(nums,target))
 
 
 def two_sum_optimized(nums, target):
-    pass
+    hash_map = {}
+    for i, num in enumerate(nums):
+        complement = target - num 
+        if complement in hash_map:
+            return [hash_map[complement], i]
+        else:
+            hash_map[num] = i 
+
+print(two_sum_optimized(nums,target))
