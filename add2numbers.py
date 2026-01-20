@@ -25,7 +25,7 @@ def to_list(node):
         node=node.next 
     return lst
 
-list1=[2,4,3]
+list1=[1,2,4,3]
 list2=[5,6,4]
 
 l1=to_linked(list1)
@@ -51,8 +51,8 @@ def add_two(l1,l2):
         pointer.next=Node(total%10) 
         pointer=pointer.next
 
-        l1=l1.next 
-        l2=l2.next 
+        if l1: l1=l1.next 
+        if l2: l2=l2.next 
 
     return dummy.next
 
